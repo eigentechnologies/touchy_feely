@@ -14,4 +14,6 @@ if __name__ == "__main__":
 
     module = touchy.ModuleToucher(args.module_path)
     module.touch()
-    print(module.texts_in_module)
+    feelings = feely.Feeler("\n".join(module.texts_in_module))
+    feelings.feel()
+    print(feelings.feeling)
